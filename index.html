@@ -9,30 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <h1><a class="navbar-brand" href="#"><img src="img/logo_trocha.png" alt="Logo" class="logo-img"></a></h1>
+        </nav>
+      </header>
     <main id="video-content">
         <div id="video-container">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FutG0Pw8GG4?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OxRxEdtf7fs" frameborder="0" allowfullscreen></iframe>
         </div>
         <button id="btn-video">
-            <a id="btn-link" href="https://www.youtube.com/embed/FutG0Pw8GG4?">CLICKEAME</a>
+            <a id="btn-link" >Terminé el video</a>
         </button>
-
-    <div id="popup">
-        <img src="/img/card1.jpeg" alt="Imagen del pop-up">
-    </div>
-
+        
+        <div id="popup">
+            <img src="/img/Pop_Up.png" alt="Imagen del pop-up">
+        </div>
     </main>
+
     <script>
         function openPopup() {
             document.getElementById('popup').style.display = 'block';
         }
 
         setTimeout(function() {
-            var btn = document.getElementById('btn-link');
-            btn.innerHTML = 'TERMINÉ EL VIDEO';
-            btn.href = '#'; 
+            var btn = document.getElementById('btn-video');
+            btn.style.opacity = 1;
             document.getElementById('btn-video').addEventListener('click', openPopup);
-        }, 60000);
+        }, 3000);
     </script>
 </body>
 </html>
